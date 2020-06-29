@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +20,7 @@ import androidx.lifecycle.MutableLiveData;
 public class FirstFragmnet extends Fragment {
 
     EditText editText;
-    TextView textView,textView2;
+    TextView textView, textView2;
     Button button;
 
     private MutableLiveData<String> stringMLiveData;
@@ -31,7 +32,7 @@ public class FirstFragmnet extends Fragment {
         return stringMLiveData;
     }
 
-    public void setTextChange(String text){
+    public void setTextChange(String text) {
         textView.setText(text);
     }
 
@@ -70,7 +71,8 @@ public class FirstFragmnet extends Fragment {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                textView2.setText(stringMLiveData.getValue()+"   "+textView.getText());
+                textView2.setText(stringMLiveData.getValue() + "   " + textView.getText());
+                Toast.makeText(getContext(),"Your Text :"+textView2.getText(),Toast.LENGTH_SHORT).show();
             }
         });
     }
