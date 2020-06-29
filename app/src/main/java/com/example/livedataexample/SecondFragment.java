@@ -12,14 +12,25 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 
 public class SecondFragment extends Fragment {
     EditText editText;
     TextView textView;
+
+    private MutableLiveData<String> stringLiveData;
+
+    public MutableLiveData<String> getStringLiveData() {
+        if (stringLiveData == null) {
+            stringLiveData = new MutableLiveData<String>();
+        }
+        return stringLiveData;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.socondfrag,container,false);
+        View view = inflater.inflate(R.layout.socondfrag, container, false);
         return view;
     }
 
