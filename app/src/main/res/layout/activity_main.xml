@@ -11,7 +11,7 @@
     <FrameLayout
         android:id="@+id/firstframe"
         android:layout_width="match_parent"
-        android:layout_height="363dp"
+        android:layout_height="435dp"
         app:layout_constraintBottom_toTopOf="@id/secondframe"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,7 +20,7 @@
     <FrameLayout
         android:id="@+id/secondframe"
         android:layout_width="match_parent"
-        android:layout_height="363dp"
+        android:layout_height="291dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstframe"
