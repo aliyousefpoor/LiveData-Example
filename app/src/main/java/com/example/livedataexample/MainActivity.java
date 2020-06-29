@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         firstFragmnet.getStringMLiveData().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-
+                secondFragment.setTextChange(s);
             }
         });
 
         secondFragment.getStringLiveData().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-
+                firstFragmnet.setTextChange(s);
             }
         });
 
