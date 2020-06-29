@@ -28,6 +28,10 @@ public class FirstFragmnet extends Fragment {
         return stringMLiveData;
     }
 
+    public void setTextChange(String text){
+        textView.setText(text);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
