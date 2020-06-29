@@ -48,7 +48,7 @@ public class FirstFragmnet extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                stringMLiveData.setValue(s.toString());
             }
 
             @Override
